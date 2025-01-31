@@ -166,7 +166,7 @@ const BasicCalculator = () => {
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-4 text-blue-400 dark:text-blue-300">
           <FaCalculator className="text-xl" />
-          <span className="text-sm font-medium">BASIC CALCULATOR</span>
+          <span className="text-lg font-semibold">BASIC CALCULATOR</span>
         </div>
 
         <AnimatePresence mode='wait'>
@@ -193,13 +193,13 @@ const BasicCalculator = () => {
 
       <div className="grid grid-cols-4 gap-3">
         {/* Memory Row */}
-        <Button onClick={memoryClear} color="special" className="text-sm">
+        <Button onClick={memoryClear} color="special">
           MC
         </Button>
-        <Button onClick={memoryRecall} color="special" className="text-sm">
+        <Button onClick={memoryRecall} color="special">
           MR
         </Button>
-        <Button onClick={memoryAdd} color="special" className="text-sm">
+        <Button onClick={memoryAdd} color="special">
           M+
         </Button>
         <Button onClick={clearDisplay} color="special">

@@ -4,11 +4,11 @@ import {
   FaCalculator, 
   FaDollarSign,
   FaGlobe,
-  FaMenu,
-  FaX
 } from 'react-icons/fa';
 import { FiActivity, FiPrinter, FiSun, FiMoon } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
+import { PiGraphicsCard } from "react-icons/pi";
+
 
 const modes = [
   { id: 'basic', name: 'Standard', icon: <FaCalculator /> },
@@ -16,6 +16,7 @@ const modes = [
   { id: 'financial', name: 'Financial', icon: <FaDollarSign /> },
   { id: 'currency', name: 'Currency', icon: <FaGlobe /> },
   { id: 'printing', name: 'Printing', icon: <FiPrinter /> },
+  { id: 'graphing', name: 'Graphing', icon: <PiGraphicsCard /> },
 ];
 
 const Layout = ({ children, activeMode, setActiveMode }) => {
@@ -36,7 +37,7 @@ const Layout = ({ children, activeMode, setActiveMode }) => {
             onClick={toggleTheme}
             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
           >
-            {isDark ? <FiSun className="w-5 h-5 dark:text-white" /> : <FiMoon className="w-5 h-5" />}
+            {isDark ? <FiSun className="w-5 h-5" /> : <FiMoon className="w-5 h-5 dark:text-white" />}
           </button>
         </div>
         

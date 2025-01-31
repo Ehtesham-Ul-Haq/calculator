@@ -128,9 +128,9 @@ const ScientificCalculator = () => {
 
   return (
     <div className="max-w-2xl w-full mx-auto bg-white/10 dark:bg-gray-800/10 backdrop-blur-lg rounded-3xl p-6 shadow-xl border border-white/20 dark:border-gray-700/50">
-      <div className="flex items-center gap-2 mb-4 text-purple-400 dark:text-purple-300">
+      <div className="flex items-center gap-2 mb-4 text-blue-400 dark:text-blue-300">
         <FaCalculator className="text-xl" />
-        <span className="text-sm font-medium">SCIENTIFIC CALCULATOR</span>
+        <span className="text-lg font-semibold">SCIENTIFIC CALCULATOR</span>
       </div>
 
       <div className="mb-6">

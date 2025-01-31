@@ -23,13 +23,32 @@ const CurrencyConverter = () => {
     .then(res => setRates(res.data.rates));
     
     const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setDropdownOpen(null);
+      if (dropdownRef.current) {
+        // Get dropdown content element
+        const dropdownContent = dropdownRef.current.querySelector('.dropdown-content');
+        if (dropdownContent) {
+          // Get bounding rectangle of dropdown content
+          const rect = dropdownContent.getBoundingClientRect();
+          
+          // Check if click is inside dropdown content (including scrollbar area)
+          const isInDropdown = (
+            e.clientX >= rect.left &&
+            e.clientX <= rect.right &&
+            e.clientY >= rect.top &&
+            e.clientY <= rect.bottom
+          );
+
+          if (!isInDropdown) {
+            setDropdownOpen(null);
+          }
+        }
       }
     };
+
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  }, [dropdownOpen]);  // Add dropdownOpen to dependencies
+
   
   
   const convert = () => {
@@ -66,9 +85,9 @@ const CurrencyConverter = () => {
             animate="visible"
             exit="exit"
             variants={variants}
-            className="absolute z-[9999] w-full mt-2 text-gray-700 dark:text-white bg-white dark:bg-gray-800/90 backdrop-blur-lg rounded-lg shadow-xl overflow-hidden"
+            className="dropdown-content absolute z-[9999] w-full mt-2 bg-white dark:bg-gray-800/90 backdrop-blur-lg rounded-lg shadow-xl"
           >
-            <div className="max-h-60 overflow-x-hidden overflow-y-scroll">
+            <div className="max-h-60 overflow-y-auto thin-scrollbar">
               {Object.keys(rates).map(currency => (
                 <motion.div
                   key={currency}

@@ -6,6 +6,7 @@ import ScientificCalculator from './calculators/ScientificCalculator';
 import FinancialCalculator from './calculators/FinancialCalculator';
 import CurrencyConverter from './calculators/CurrencyConverter';
 import PrintingCalculator from './calculators/PrintingCalculator';
+import GraphingCalculator from './calculators/GraphingCalculator';
 
 const Calculator = () => {
   const [activeMode, setActiveMode] = useState('basic');
@@ -26,6 +27,7 @@ const Calculator = () => {
           {activeMode === 'financial' && <FinancialCalculator />}
           {activeMode === 'currency' && <CurrencyConverter />}
           {activeMode === 'printing' && <PrintingCalculator />}
+          {activeMode === 'graphing' && <GraphingCalculator />}
         </motion.div>
       </AnimatePresence>
     </Layout>
