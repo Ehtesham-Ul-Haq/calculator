@@ -91,7 +91,7 @@ const GraphicsCalculator = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-full h-screen flex flex-col dark:bg-gray-900"
+      className="w-full h-screen flex flex-col dark:bg-gray-900 mx-auto bg-white/10 dark:bg-gray-800/10 backdrop-blur-lg rounded-3xl shadow-xl border border-white/20 dark:border-gray-700/50"
     >
       <div className="flex-1 flex flex-col md:flex-row gap-6 p-6">
         {/* Control Panel */}
@@ -251,13 +251,13 @@ const GraphicsCalculator = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="fixed left-12 bottom-16 md:bottom-4 md:left-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg p-2 rounded-lg shadow-lg text-xs text-gray-600 dark:text-gray-300"
+        className="fixed left-12 bottom-16 md:left-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg p-2 rounded-lg shadow-lg text-xs text-gray-600 dark:text-gray-300"
       >
         <div className="flex items-center gap-2 mb-2">
           <FaCode className="text-blue-500" />
           <span>Supported Functions:</span>
         </div>
-        <div className="grid grid-cols-6 md:grid-cols-2 gap-x-[22px] md:gap-2">
+        <div className="grid grid-cols-6 gap-x-[22px] md:gap-2">
           <span>sin(x)</span>
           <span>cos(x)</span>
           <span>tan(x)</span>
