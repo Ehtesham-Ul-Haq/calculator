@@ -58,7 +58,7 @@ const Layout = ({ children, activeMode, setActiveMode }) => {
       </motion.div>
 
       {/* Mobile Navbar */}
-      <div className="md:hidden fixed bottom-0 w-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg border-t border-gray-200 dark:border-gray-700">
+      <div className="md:hidden fixed bottom-0 w-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg border-t border-gray-200 dark:border-gray-700 z-50">
         <div className="flex justify-around p-2">
           {modes.map((mode) => (
             <button
