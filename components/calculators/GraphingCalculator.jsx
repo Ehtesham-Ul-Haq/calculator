@@ -7,8 +7,6 @@ import {
   FaPlus, 
   FaTrash, 
   FaChartLine, 
-  FaExpand,
-  FaRegChartBar,
   FaCode
 } from 'react-icons/fa';
 

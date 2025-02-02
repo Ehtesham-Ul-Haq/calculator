@@ -8,7 +8,6 @@ import {
   FaMinus,
   FaPercentage,
   FaEquals,
-  FaSuperscript,
   FaCalculator
 } from 'react-icons/fa';
 

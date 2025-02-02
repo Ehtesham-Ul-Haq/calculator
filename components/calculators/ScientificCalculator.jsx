@@ -2,10 +2,7 @@ import { useState, useEffect } from 'react';
 import { evaluate } from 'mathjs';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  FaSin, FaCos, FaTan, FaSquareRootAlt,
-  FaSuperscript, FaPercentage, FaPi, FaBackspace,
-  FaDivide, FaTimes, FaPlus, FaMinus, FaEquals,
-  FaCalculator, FaRegSquare, FaPowerOff
+  FaBackspace,FaDivide, FaTimes, FaPlus, FaMinus, FaEquals, FaCalculator
 } from 'react-icons/fa';
 
 const buttonAnimations = {
