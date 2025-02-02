@@ -1,18 +1,27 @@
 import Script from "next/script";
+import { useEffect } from "react";
 
 const AdsterraBanner = () => {
+  useEffect(() => {
+    window.atOptions = {
+      key: "4708cf0c1a8875deb6d6645665bcb8eb",
+      format: "iframe",
+      height: 90,
+      width: 728,
+      params: {},
+    };
+  }, []);
+
   return (
     <div>
-      {/* Adsterra Script */}
+      {/* Adsterra Ad Script */}
       <Script
         strategy="afterInteractive"
-        async
-        data-cfasync="false"
-        src="//pl25751111.profitablecpmrate.com/ce6719f2a85ba1d667d67997aa08266d/invoke.js"
+        src="//www.highperformanceformat.com/4708cf0c1a8875deb6d6645665bcb8eb/invoke.js"
       />
       
       {/* Ad Container */}
-      <div id="container-ce6719f2a85ba1d667d67997aa08266d"></div>
+      <div id="container-4708cf0c1a8875deb6d6645665bcb8eb"></div>
     </div>
   );
 };
