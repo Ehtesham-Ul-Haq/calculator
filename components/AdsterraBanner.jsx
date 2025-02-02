@@ -12,7 +12,7 @@ const AdsterraBanner = () => {
       />
       
       {/* Ad Container */}
-      <div id="container-ce6719f2a85ba1d667d67997aa08266d" className="w-20 h-20 rounded-full"></div>
+      <div id="container-ce6719f2a85ba1d667d67997aa08266d"></div>
     </div>
   );
 };
